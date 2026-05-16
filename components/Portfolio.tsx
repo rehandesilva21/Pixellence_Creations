@@ -10,6 +10,7 @@ import {
   INITIAL_COUNT,
   LOAD_MORE_COUNT,
   type Project,
+  resolveCardImage,
 } from "@/data/Portfoliodata";
 
 function getYouTubeEmbedUrl(url: string): string | null {
@@ -114,7 +115,7 @@ export function Portfolio() {
                 className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 cursor-pointer"
               >
                 <Image
-                  src={project.image}
+                 src={resolveCardImage(project)}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -266,7 +267,8 @@ export function Portfolio() {
                       onClick={openLightbox}
                     >
                       <Image
-                        src={selectedProject.image}
+                       
+                        src={selectedProject.image || resolveCardImage(selectedProject)}
                         alt={selectedProject.title}
                         fill
                         className="object-contain transition-transform duration-500 group-hover/img:scale-[1.03]"
@@ -400,7 +402,7 @@ export function Portfolio() {
                 onClick={() => setLightboxOpen(false)}
               >
                 <Image
-                  src={selectedProject.image}
+                  src={selectedProject.image || resolveCardImage(selectedProject)}
                   alt={selectedProject.title}
                   fill
                   className="object-contain"
