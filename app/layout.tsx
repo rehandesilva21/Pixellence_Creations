@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Pixellence Creations",
   description:
     "Premium content creation agency — world-class graphics, cinematic video production, and intuitive UI design.",
+     icons: {
+    icon: "/Images/Pixellence-new.jpg",
+  },
 };
 
 export default function RootLayout({
