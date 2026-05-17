@@ -10,6 +10,9 @@ export const metadata: Metadata = {
      icons: {
     icon: "/Images/Pixellence-new.jpg",
   },
+   verification: {
+    google: "80ICjaYuja5GGv3iGKeTYw254EucMxnOHJg8BVjyxHQ",
+  },
 };
 
 export default function RootLayout({
